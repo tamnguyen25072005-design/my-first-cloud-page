@@ -84,7 +84,7 @@
     /* 推薦卡片佈局 */
     .section-title { font-size: 19px; color: var(--primary); margin-bottom: 14px; font-weight: bold; }
     .cards-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-bottom: 30px;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); gap: 16px; margin-bottom: 30px;
     }
     .card {
       background: var(--card-bg); border-radius: 12px; padding: 18px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--secondary); transition: transform 0.2s, box-shadow 0.2s;
@@ -107,14 +107,13 @@
 <div class="container">
   <header>
     <h1>🍲 崑大台味豐閣 — 智慧餐飲推薦系統</h1>
-    <p>320 筆歷史點餐資料庫秒速載入 ｜ 顧客協同過濾 (Collaborative Filtering) 探勘推薦</p>
+    <p>600 筆歷史點餐資料庫秒速載入 ｜ 顧客協同過濾 (Collaborative Filtering) 探勘推薦</p>
   </header>
-
   <!-- 系統狀態列 -->
   <div class="status-bar" id="statusBar">
     <div>
       <span style="font-weight:bold; color:#1B5E20;">⚡ 歷史資料庫已就緒：</span>
-      <span id="statusInfo">已載入 320 筆點餐資料、44 道台式菜餚主檔</span>
+      <span id="statusInfo">已載入 600 筆點餐資料、44 道台式菜餚主檔</span>
     </div>
     <div class="status-badge">零延遲即時運算</div>
   </div>
@@ -252,7 +251,7 @@ function initData() {
   }
   const quantities = [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 6, 8, 10];
 
-  for (let i = 0; i < 320; i++) {
+  for (let i = 0; i < 600; i++) {
     const cust = CUSTOMER_LIST[Math.floor(rand() * CUSTOMER_LIST.length)];
     const dish = MENU_RAW[Math.floor(rand() * MENU_RAW.length)];
     const qty = quantities[Math.floor(rand() * quantities.length)];
